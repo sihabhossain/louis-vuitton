@@ -2,11 +2,34 @@
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { AiOutlineSearch } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
-      <div className=" md:py-6 py-3 md:px-10 px-5 flex items-center justify-between ">
+      <div
+        className={`md:py-6 py-3 md:px-10 px-5 flex items-center justify-between fixed top-0 w-full hover:bg-white transition duration-500 ${
+          scrolling ? "bg-white border-b-1 border-gray-400" : "bg-transparent"
+        }`}
+      >
         {/* Menu and Search */}
         <div className="flex items-center md:gap-6">
           {/* menu */}
@@ -32,7 +55,7 @@ const Navbar = () => {
 
         {/* Louis vuitton */}
         <div>
-          <h2 className="font-bold text-3xl">LOUIS VUITTON</h2>
+          <h2 className="font-bold md:text-3xl text-2xl">LOUIS VUITTON</h2>
         </div>
 
         {/* Call, wishlist , mylv */}
