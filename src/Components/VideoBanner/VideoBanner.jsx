@@ -16,7 +16,7 @@ const VideoBanner = ({ video1, title }) => {
 
       <div className=" absolute md:bottom-12 md:left-[535px] bottom-5 left-20">
         <div className="">
-          <h2 className="mb-5 text-2xl text-white">{title}</h2>
+          <h2 className="mb-5 text-2xl text-white text-center">{title}</h2>
           <button className="py-2 px-7 bg-pink-400 rounded-full border-[1px] transition bg-transparent text-white bg-blend-normal border-white">
             Discover the collection
           </button>
