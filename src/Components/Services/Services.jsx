@@ -9,7 +9,7 @@ const Services = () => {
       </div>
 
       {/* Service details */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:mx-20 mx-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:mx-20 mx-10">
         {serviceData.map((item) => (
           <ServiceDetails
             title={item.title}
