@@ -55,7 +55,9 @@ const Navbar = () => {
 
         {/* Louis vuitton */}
         <div>
-          <h2 className="font-bold md:text-3xl text-2xl">LOUIS VUITTON</h2>
+          <h2 className="font-bold md:text-3xl text-2xl md:ml-14">
+            LOUIS VUITTON
+          </h2>
         </div>
 
         {/* Call, wishlist , mylv */}
